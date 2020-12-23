@@ -261,7 +261,11 @@ body{
 	padding-top: 10px;
 }
 
-.social-icons{
+.contact.links{
+	color: #fff;
+}
+
+/*.social-icons{
 	top: 50%;
 	transform: translate(-50%);
 	position: sticky;
@@ -280,4 +284,4 @@ body{
 	color: #fff;
 	background: #000;
 
-}
+}*/
