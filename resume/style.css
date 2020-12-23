@@ -67,8 +67,9 @@ body{
 /*--------ABOUT---------*/
 
 .about{
-	padding-top: 100px;
-	margin-bottom: -130px;
+	padding-top: 50px;
+	padding-bottom: 150px;
+	margin-bottom: -100px;
 }
 
 .profile-img{
@@ -122,6 +123,8 @@ body{
 	border-radius: 16px;
 	background-color: #000 !important;
 }
+
+/*-----------Resume----------*/
 
 .resume{
 	margin-top: -50px;
@@ -185,6 +188,8 @@ body{
 	z-index: 1;
 }
 
+/*--------Portfolio--------*/
+
 .portfolio{
 	background-color: #fff;
 	padding-top: 50px;
@@ -211,6 +216,8 @@ body{
 	margin-top: 10px;
 }
 
+/*----------Contact----------*/
+
 .contact{
 	padding-top: 50px;
 	background: linear-gradient(rgba(0,0,0,0.8),rgba(0,0,0,0.8)),url(img/background.jpg);
@@ -221,11 +228,11 @@ body{
 }
 
 .contact .row{
-	padding: 30px 0;
+	padding: 50px 0;
 	font-size: 22px;
 }
 
-.contact .col-sm-6 .fa{ 
+.contact .col-md-4 .fa{ 
 	padding: 10px;
 	font-size: 40px;
 }
@@ -261,7 +268,7 @@ body{
 	padding-top: 10px;
 }
 
-.contact.links{
+.fa{
 	color: #fff;
 }
 
