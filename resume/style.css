@@ -134,13 +134,14 @@ body{
 }
 
 .resume h3{
-	margin-bottom: 50px;
+	margin: 25px;
 	background-color: #000;
 	color: #fff;
 	padding-bottom: 5px;
 }
 
 .timeline{
+	margin: 25px;
 	list-style-type: none;
 	position: relative;
 } 
@@ -272,23 +273,3 @@ body{
 	color: #fff;
 }
 
-/*.social-icons{
-	top: 50%;
-	transform: translate(-50%);
-	position: sticky;
-	z-index: 1;
-	text-align: center;
-	width: 70px;
-}
-
-.social-icons ul li{
-	height: 60px;
-	width: 60px;
-	list-style-type: none;
-	padding-left: 12px;
-	padding-top: 6px;
-	margin-top: 5px;
-	color: #fff;
-	background: #000;
-
-}*/
