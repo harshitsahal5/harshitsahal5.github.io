@@ -1,4 +1,3 @@
-/*! SmoothScroll v16.1.4 | (c) 2020 Chris Ferdinandi | MIT License | http://github.com/cferdinandi/smooth-scroll */
 (function (global, factory) {
 	typeof exports === 'object' && typeof module !== 'undefined' ? module.exports = factory() :
 	typeof define === 'function' && define.amd ? define(factory) :
@@ -91,12 +90,6 @@
 		return parseInt(window.getComputedStyle(elem).height, 10);
 	};
 
-	/**
-	 * Escape special characters for use with querySelector
-	 * @author Mathias Bynens
-	 * @link https://github.com/mathiasbynens/CSS.escape
-	 * @param {String} id The anchor ID to escape
-	 */
 	var escapeCharacters = function (id) {
 
 		// Remove leading hash
@@ -171,13 +164,6 @@
 
 	};
 
-	/**
-	 * Calculate the easing pattern
-	 * @link https://gist.github.com/gre/1650294
-	 * @param   {Object} settings Easing pattern
-	 * @param   {Number} time     Time animation should take to complete
-	 * @returns {Number}
-	 */
 	var easingPattern = function (settings, time) {
 		var pattern;
 
@@ -215,13 +201,7 @@
 
 	/**
 	 * Calculate how far to scroll
-	 * Clip support added by robjtede - https://github.com/cferdinandi/smooth-scroll/issues/405
-	 * @param {Element} anchor       The anchor element to scroll to
-	 * @param {Number}  headerHeight Height of a fixed header, if any
-	 * @param {Number}  offset       Number of pixels by which to offset scroll
-	 * @param {Boolean} clip         If true, adjust scroll distance to prevent abrupt stops near the bottom of the page
-	 * @returns {Number}
-	 */
+	 **/
 	var getEndLocation = function (anchor, headerHeight, offset, clip) {
 		var location = 0;
 		if (anchor.offsetParent) {
@@ -282,10 +262,7 @@
 
 	/**
 	 * Update the URL
-	 * @param  {Node}    anchor  The anchor that was scrolled to
-	 * @param  {Boolean} isNum   If true, anchor is a number
-	 * @param  {Object}  options Settings for Smooth Scroll
-	 */
+	 **/
 	var updateURL = function (anchor, isNum, options) {
 
 		// Bail if the anchor is a number
@@ -308,10 +285,7 @@
 
 	/**
 	 * Bring the anchored element into focus
-	 * @param {Node}     anchor      The anchor element
-	 * @param {Number}   endLocation The end location to scroll to
-	 * @param {Boolean}  isNum       If true, scroll is to a position rather than an element
-	 */
+	 **/
 	var adjustFocus = function (anchor, endLocation, isNum) {
 
 		// Is scrolling to top of page, blur
@@ -335,11 +309,7 @@
 
 	/**
 	 * Emit a custom event
-	 * @param  {String} type    The event type
-	 * @param  {Object} options The settings object
-	 * @param  {Node}   anchor  The anchor element
-	 * @param  {Node}   toggle  The toggle element
-	 */
+	 **/
 	var emitEvent = function (type, options, anchor, toggle) {
 		if (!options.emitEvents || typeof window.CustomEvent !== 'function') return;
 		var event = new CustomEvent(type, {
@@ -414,10 +384,7 @@
 
 			/**
 			 * Stop the scroll animation when it reaches its target (or the bottom/top of page)
-			 * @param {Number} position Current position on the page
-			 * @param {Number} endLocation Scroll to location
-			 * @param {Number} animationInterval How much to scroll on this loop
-			 */
+			 **/
 			var stopAnimateScroll = function (position, endLocation) {
 
 				// Get the current location
@@ -462,8 +429,7 @@
 
 			/**
 			 * Reset position to fix weird iOS bug
-			 * @link https://github.com/cferdinandi/smooth-scroll/issues/45
-			 */
+			 **/
 			if (window.pageYOffset === 0) {
 				window.scrollTo(0, 0);
 			}
@@ -492,14 +458,12 @@
 		var clickHandler = function (event) {
 
 			// Don't run if event was canceled but still bubbled up
-			// By @mgreter - https://github.com/cferdinandi/smooth-scroll/pull/462/
 			if (event.defaultPrevented) return;
 
 			// Don't run if right-click or command/control + click or shift + click
 			if (event.button !== 0 || event.metaKey || event.ctrlKey || event.shiftKey) return;
 
 			// Check if event.target has closest() method
-			// By @totegi - https://github.com/cferdinandi/smooth-scroll/pull/401/
 			if (!('closest' in event.target)) return;
 
 			// Check if a smooth scroll link was clicked
