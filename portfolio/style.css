@@ -5,31 +5,21 @@ body{
 }
 
 /* Navbar */
+
 #logoimg{
 	width: 8%;
 	float: left;
 	padding-top: 1%;
 }
 
-#micro{
-	float: right;
-	width: 20%;
-	padding-right: 10%;
-}
-
-#gdg{
-	float: right;
-	width: 20%;
-	padding-right: 10%;
-}
 
 .topnav {
 	background-color: black;
 	position: fixed;
 	width: 100%;
-  }
-  
-  /* Style the links inside the navigation bar */
+}
+
+/* Links Style inside the navbar */
 .topnav a {
 	float: right;
 	color: #f2f2f2;
@@ -38,13 +28,13 @@ body{
 	font-size: 20px;
 }
   
-  /* Change the color of links on hover */
+/* Change the color of links on hover */
 .topnav a:hover {
 	background-color: #ddd;
 	color: black;
 }
 
-/*-------------HEADER CSS----------*/
+/* HEADER CSS */
 
 #container{
 	height: auto; 
@@ -80,6 +70,18 @@ header{
 }
 
 /* Images */
+
+#micro{
+	float: right;
+	width: 20%;
+	padding-right: 10%;
+}
+
+#gdg{
+	float: right;
+	width: 20%;
+	padding-right: 10%;
+}
 
 #techimg{
 	float: right;
