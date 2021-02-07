@@ -52,6 +52,15 @@ body{
 	color: rgb(238, 238, 29);
 }
 
+#cv{
+	text-decoration: none;
+	color: blanchedalmond;
+	border: 2px solid blanchedalmond;
+	border-radius: 20%;
+	padding: 2%;
+	margin-left: 25%;
+}
+
 /* Body */
 
 #about{
